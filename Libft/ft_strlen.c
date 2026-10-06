@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mo <mo@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/24 16:12:54 by mkhader           #+#    #+#             */
-/*   Updated: 2026/10/01 18:08:04 by mo               ###   ########.fr       */
+/*   Created: 2026/09/27 01:57:03 by mo                #+#    #+#             */
+/*   Updated: 2026/10/01 23:10:23 by mo               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int	c)
+#include "libft.h"
+size_t ft_strlen( const char* str )
 {
-	if (c >= 0 && c <= 255)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+int counter = 0;
+    while(str[counter] != '\0')
+    {
+       counter++;
+    }
+    return counter;
+    
 }
+// int main(void)
+// {
+//     size_t c = strlen("hello world");
+//     printf("%zu",c);
+   
+// }
